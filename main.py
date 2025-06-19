@@ -71,8 +71,7 @@ def send_morning_digest():
         "👨‍💼 Администрация: @nordist_admin",
         "<a href='https://bingx.com/partner/KIMTRADING/'>📈 Получить бонусы и пониженную комиссию на BingX</a>"
     ]
-    send_message(CHANNEL_ID, "
-".join(message))
+    send_message(CHANNEL_ID, "\n".join(message))  # Исправлено здесь
 
 def send_news_both():
     news = get_news(limit=6)
@@ -85,8 +84,7 @@ def send_news_both():
         "👨‍💼 Администрация: @nordist_admin",
         "<a href='https://bingx.com/partner/KIMTRADING/'>📈 Получить бонусы и пониженную комиссию на BingX</a>"
     ]
-    text = "
-".join(message)
+    text = "\n".join(message)  # Исправлено здесь
     send_message(CHANNEL_ID, text)
     send_message(USER_ID, text)
 
