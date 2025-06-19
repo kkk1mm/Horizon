@@ -130,14 +130,14 @@ def setup_scheduler():
         send_morning_digest,
         'cron',
         hour=7,
-        minute=40,
+        minute=44,
         misfire_grace_time=60
     )
     scheduler.add_job(
         send_news_both,
         'cron',
         hour=7,
-        minute=41,
+        minute=45,
         misfire_grace_time=60
     )
     return scheduler
